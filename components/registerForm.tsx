@@ -6,17 +6,17 @@ import InputAlert from "./alerts/successAlert";
 
 
 export function RegisterForm() {
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
     ;
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const userController = new UserController(' ');
+        const userController = new UserController('https://api-posts.codificando.xyz');
 
         try {
-            const createResult = await userController.createUser({ username, password });
+            const createResult = await userController.createUser({ email, password });
             if (createResult)
                 await InputAlert('User succesfully created', 'success')
             localStorage.clear()
@@ -48,8 +48,8 @@ export function RegisterForm() {
                                         required
                                         className="w-full px-4 py-3 text-sm text-gray-800 border border-gray-300 rounded-lg outline-blue-600"
                                         placeholder="Enter user name"
-                                        value={username}
-                                        onChange={(e) => setUsername(e.target.value)}
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
                                     />
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb" className="w-[18px] h-[18px] absolute right-4" viewBox="0 0 24 24">
                                         <circle cx="10" cy="7" r="6" data-original="#000000"></circle>

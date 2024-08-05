@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useEffect } from "react";
 export default function Hero() {
     useEffect(() => {
-        localStorage.removeItem('token');
+        localStorage.removeItem('email');
     }, []);
     return (
         <div className="flex flex-wrap">

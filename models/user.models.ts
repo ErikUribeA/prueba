@@ -1,18 +1,17 @@
 export interface BodyRequestCreateUser{
-    username: string,
+    email: string,
     password: string
 }
 
 export interface RequestLoginUser{
-    username:string,
+    email:string,
     password:string
 }
 export interface ResponseCreateUser{
-    token: string,
     message: string,
 }
 
 export interface ResponseLoginUser{
-    token: string,
     message: string,
+    email:string,
 }
