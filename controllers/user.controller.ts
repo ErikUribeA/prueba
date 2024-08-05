@@ -16,7 +16,7 @@ export class UserController{
             headers: headers,
             body: JSON.stringify(user)
         };
-        const url = this.domain + '/api/register';
+        const url = this.domain;
         const result: Response = await fetch(url, reqOptions);
 
         if (!result.ok) {
@@ -30,7 +30,7 @@ export class UserController{
     }
 
     async login(data: RequestLoginUser): Promise<ResponseLoginUser> {
-        const endPointLogin: string = 'api/login'
+
         const headers: Record<string,string> = {
             'Content-Type':'application/json'
         }
@@ -39,7 +39,7 @@ export class UserController{
             headers: headers,
             body: JSON.stringify(data)
         }
-        const url = this.urlApi + endPointLogin
+        const url = this.urlApi
         const result: Response = await fetch(url, reqOptions)
     
         if(result.status !== 200){

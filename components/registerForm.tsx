@@ -13,7 +13,7 @@ export function RegisterForm() {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const userController = new UserController('https://api-posts.codificando.xyz');
+        const userController = new UserController(' ');
 
         try {
             const createResult = await userController.createUser({ username, password });
