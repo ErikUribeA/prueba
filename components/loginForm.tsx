@@ -35,8 +35,8 @@ export function LoginForm() {
     return (
         <div className="font-[sans-serif] relative">
             <div className="flex flex-col items-center justify-center min-h-screen px-4 py-6">
-                <div className="grid items-center w-full max-w-6xl gap-4 md:grid-cols-2">
-                    <div className="border border-gray-300 rounded-lg p-6 max-w-md shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] max-md:mx-auto">
+                <div className="grid items w-full max-w-6xl gap-4 md:grid-cols-2">
+                    <div className="border border-yellow-400 rounded-lg p-6 max-w-md shadow-[0_2px_22px_-4px_rgba(93,96,127,0.2)] max-md:mx-auto">
                         <form className="space-y-4 login-form" onSubmit={handleSubmit}>
                             <div className="mb-8">
                                 <h3 className="text-3xl font-extrabold text-gray-800">Sign in</h3>
@@ -52,7 +52,7 @@ export function LoginForm() {
                                         id="username"
                                         type="text"
                                         required
-                                        className="w-full px-4 py-3 text-sm text-gray-800 border border-gray-300 rounded-lg outline-blue-600"
+                                        className="w-full px-4 py-3 text-sm text-gray-800 border border-gray-300 rounded-lg outline-yellow-200"
                                         placeholder="Enter user name"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
@@ -71,7 +71,7 @@ export function LoginForm() {
                                         id="password"
                                         type={showPassword ? "text" : "password"}
                                         required
-                                        className="w-full px-4 py-3 text-sm text-gray-800 border border-gray-300 rounded-lg outline-green-500"
+                                        className="w-full px-4 py-3 text-sm text-gray-800 border border-gray-300 rounded-lg outline-black"
                                         placeholder="Enter password"
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
@@ -89,17 +89,17 @@ export function LoginForm() {
                                 </div>
                             </div>
                             <div className="!mt-8">
-                                <button type="submit" className="w-full px-4 py-3 text-sm tracking-wide text-white bg-blue-600 rounded-lg shadow-xl hover:bg-blue-700 focus:outline-none">
+                                <button type="submit" className="w-full px-4 py-3 text-sm tracking-wide text-white bg-yellow-200 rounded-lg shadow-xl hover:bg-yellow-300 focus:outline-none">
                                     Log in
                                 </button>
                             </div>
                             <p className="text-sm !mt-8 text-center text-gray-800">
-                                Don&apos;t have an account <a href="#" onClick={(e) => { e.preventDefault(); window.location.href = '/register' }} className="ml-1 font-semibold text-blue-600 hover:underline whitespace-nowrap">Register here</a>
+                                Don&apos;t have an account <a href="#" onClick={(e) => { e.preventDefault(); window.location.href = '/register' }} className="ml-1 font-semibold text-yellow-300 hover:underline whitespace-nowrap">Register here</a>
                             </p>
                         </form>
                     </div>
                     <div className="lg:h-[400px] md:h-[300px] max-md:mt-8">
-                        <img src="https://readymadeui.com/login-image.webp" className="block object-cover w-full h-full mx-auto max-md:w-4/5" alt="Dining Experience" />
+                        <img src="media/Login-cuate.png" className="block object-cover  w-full" alt="Dining Experience" />
                     </div>
                 </div>
             </div>
